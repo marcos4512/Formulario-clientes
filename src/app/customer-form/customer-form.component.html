@@ -1,0 +1,35 @@
+<div>
+    <form [formGroup]="formCustomer" (submit)="search">
+      <pre></pre>
+      <h2 class="text-center">Consulta de usuarios</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div>
+            <label for="documentType">Tipo de documento</label>   
+            <br/>
+            <select class="form-control" name="documentType" formControlName="documentType">
+              <option value="" disabled selected>Seleccionar</option>
+              <option *ngFor="let type of documentTypes" [value]>{{type}}</option>
+            </select>      
+          </div>  
+          <pre></pre>
+          <div>
+            <label for="documentNumber">Número de documento</label> 
+            <br/>
+            <input class="form-control" (keypress)="validatenumberOnly($event)" type="text" formControlName="documentNumber">
+          </div>
+          <pre></pre>
+         
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <div class="d-grid">
+            <button id="bttn-form" (click)="search()" class="btn btn-primary btn-lg mb-2 rounded-pill" [disabled]="formCustomer.invalid">Buscar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>
+
+<router-outlet></router-outlet>

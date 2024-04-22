@@ -1,0 +1,75 @@
+<div>
+    <form [formGroup]="formCustomerData">
+      <pre></pre>
+      <h2 class="text-center">Datos del usuario</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="row">
+          <div class="col">
+            <label for="firstName">Primer nombre</label>   
+            <br/>
+            <input class="form-control" type="text" readonly="true" formControlName="firstName">    
+          </div>  
+
+          <pre></pre>
+
+          <div class="col">
+            <label for="middleName">Segundo nombre</label>   
+            <br/>
+            <input class="form-control" type="text" formControlName="middleName">    
+          </div>  
+        </div>  
+          <pre></pre>
+          
+          <div>
+            <label for="lastName">Primer apellido</label>   
+            <br/>
+            <input class="form-control" type="text" formControlName="lastName">    
+          </div>  
+
+          <pre></pre>
+          
+          <div>
+            <label for="secondLastName">Segundo apellido</label>   
+            <br/>
+            <input class="form-control" type="text" formControlName="secondLastName">    
+          </div>  
+
+          
+          <pre></pre>
+          
+          <div>
+            <label for="phone">Teléfono</label>   
+            <br/>
+            <input class="form-control" type="text" formControlName="phone">    
+          </div>  
+
+          
+          <pre></pre>
+          
+          <div>
+            <label for="address">Dirección</label>   
+            <br/>
+            <input class="form-control" type="text" formControlName="address">    
+          </div>  
+
+          <pre></pre>
+
+          <div>
+            <label for="city">Ciudad</label>   
+            <br/>
+            <input class="form-control" type="text" formControlName="city">    
+          </div>  
+          <pre></pre>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-2">
+          <div class="d-grid">
+        <button class="btn btn-primary mb-2 rounded-pill" routerLink="/customer-form">Volver</button>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>
+<router-outlet></router-outlet>
